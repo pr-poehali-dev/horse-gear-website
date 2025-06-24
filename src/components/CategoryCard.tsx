@@ -23,7 +23,9 @@ const CategoryCard = ({
           src={
             image.startsWith("http")
               ? image
-              : `https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&q=80`
+              : title === "Вальтрапы"
+                ? `https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=400&q=80`
+                : `https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&q=80`
           }
           alt={title}
           className="w-full h-full object-cover"
