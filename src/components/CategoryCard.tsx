@@ -18,8 +18,16 @@ const CategoryCard = ({
 }: CategoryCardProps) => {
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-      <div className="h-48 bg-gradient-to-br from-emerald-100 to-emerald-200 flex items-center justify-center">
-        <span className="text-6xl">{image}</span>
+      <div className="h-48 bg-gradient-to-br from-emerald-100 to-emerald-200 flex items-center justify-center overflow-hidden">
+        <img
+          src={
+            image.startsWith("http")
+              ? image
+              : `https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&q=80`
+          }
+          alt={title}
+          className="w-full h-full object-cover"
+        />
       </div>
 
       <div className="p-6">
